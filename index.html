@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análise de Risco - Saúde</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Análise de Risco Clínico</h1>
+            <p class="subtitle">Sistema de Apoio à Decisão Clínica</p>
+        </header>
+
+        <!-- Seção de Resultado Principal -->
+        <section class="result-section">
+            <div class="result-card" id="resultCard">
+                <div class="probability-display">
+                    <div class="circular-progress">
+                        <svg viewBox="0 0 120 120">
+                            <circle class="progress-bg" cx="60" cy="60" r="54"/>
+                            <circle class="progress-bar" id="progressBar" cx="60" cy="60" r="54"/>
+                        </svg>
+                        <div class="probability-value">
+                            <span id="probabilityValue">0</span>%
+                        </div>
+                    </div>
+                    <div class="risk-level" id="riskLevel">Aguardando análise</div>
+                </div>
+                
+                <div class="patient-info">
+                    <h3>Resultado da Análise</h3>
+                    <p id="resultDescription">Insira os dados do paciente para realizar a análise de risco.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Explicação do Modelo -->
+        <section class="explanation-section">
+            <h2>Fatores que Influenciaram o Resultado</h2>
+            <div class="explanation-cards" id="explanationCards">
+                <div class="info-placeholder">
+                    <p>Os fatores de risco serão exibidos aqui após a análise.</p>
+                </div>
+            </div>
+            <div class="model-info">
+                <div class="info-icon">ℹ️</div>
+                <p><strong>Como entender:</strong> Os fatores listados acima contribuíram para a classificação de risco. Idade avançada, sintomas persistentes e condições pré-existentes são considerados na avaliação.</p>
+            </div>
+        </section>
+
+        <!-- Seção de Dúvidas Frequentes -->
+        <section class="faq-section">
+            <h2>Dúvidas Frequentes</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Como interpretar o nível de risco?</span>
+                        <span class="arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>O sistema classifica o risco em três categorias: <strong>Seguro</strong> (menos de 50%), <strong>Moderado</strong> (entre 50% e 79%) e <strong>Alto Risco</strong> (80% ou mais). Esta classificação ajuda na tomada de decisão clínica.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Qual a precisão do modelo?</span>
+                        <span class="arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>O modelo foi treinado com dados clínicos validados e possui alta acurácia. No entanto, este sistema é uma ferramenta de apoio e não substitui o julgamento clínico do especialista.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Os dados dos pacientes são armazenados?</span>
+                        <span class="arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sim, todos os dados são armazenados de forma segura e criptografada, em conformidade com as regulamentações de proteção de dados de saúde (LGPD/HIPAA).</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Posso usar este resultado para diagnóstico?</span>
+                        <span class="arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Este sistema fornece uma avaliação de risco baseada em dados, mas deve ser utilizado como complemento ao seu conhecimento clínico e não como ferramenta única de diagnóstico.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Como os fatores de risco são calculados?</span>
+                        <span class="arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>O modelo considera múltiplas variáveis clínicas como idade, sintomas, histórico médico e exames laboratoriais. Cada fator tem um peso específico na determinação do risco final.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Botões de Ação -->
+        <section class="action-buttons">
+            <button class="btn btn-secondary" onclick="resetAnalysis()">Nova Análise</button>
+            <button class="btn btn-primary" onclick="simulateAnalysis()">Simular Análise</button>
+            <button class="btn btn-export" onclick="exportResult()">Exportar Relatório</button>
+        </section>
+
+        <footer>
+            <p>Sistema de Apoio à Decisão Clínica © 2024 - Uso exclusivo para profissionais de saúde</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
