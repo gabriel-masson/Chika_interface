@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHIK.IA - Pontos de Dor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../CSS/predict_data2.css">
+</head>
+<body>
+
+    <!-- ===================== NAVBAR ===================== -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <a href="#" class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-virus"></i>
+                </div>
+                CHIK.IA
+            </a>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Equipe</a></li>
+                <li><a href="#">Parceiros</a></li>
+                <li><a href="#">Publicações</a></li>
+            </ul>
+        </div>
+        <div class="nav-right">
+            <a href="#" class="nav-lang">
+                <i class="fas fa-globe"></i> EN
+            </a>
+            <button class="btn-nav btn-prediction">
+                <i class="fas fa-chart-line"></i> Predição
+            </button>
+            <button class="btn-nav btn-dashboard">
+                <i class="fas fa-th-large"></i> Dashboard
+            </button>
+        </div>
+    </nav>
+
+    <!-- ===================== HERO BAR + STEPPER ===================== -->
+    <div class="hero-bar">
+        <div class="stepper-wrapper">
+            <div class="step-pill completed">
+                <span class="step-icon"><i class="fas fa-check"></i></span>
+                Dados
+            </div>
+            <div class="step-connector"></div>
+            <div class="step-pill active">
+                <span class="step-icon">2</span>
+                Pontos de dor
+            </div>
+            <div class="step-connector"></div>
+            <div class="step-pill inactive">
+                <span class="step-icon">3</span>
+                Resultado
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== MAIN FORM CARD ===================== -->
+    <div class="main-container">
+        <div class="form-card">
+            <div class="card-header-section">
+                <h2 class="card-title">
+                    <i class="fas fa-hand-holding-medical"></i>
+                    Avaliação do Paciente
+                </h2>
+                <p class="card-subtitle">Selecione a intensidade da dor em cada ponto articular</p>
+            </div>
+
+            <form id="painForm">
+                <!-- Container com os dois lados LADO A LADO -->
+                <div class="pain-sides-container">
+                    
+                    <!-- Lado Esquerdo -->
+                    <div class="section-card">
+                        <div class="section-title">
+                            <i class="fas fa-arrow-left"></i>
+                            Lado Esquerdo
+                        </div>
+                        <div class="pain-grid">
+                            <div class="pain-item">
+                                <label class="pain-label">
+                                    Ombro
+                                    <span class="side-badge left">L</span>
+                                </label>
+                                <div class="custom-select-wrapper">
+                                    <select class="pain-select" name="ombro_l">
+                                        <option value="" disabled selected>Selecione</option>
+                                        <option value="0">Sem dor</option>
+                                        <option value="1">Leve</option>
+                                        <option value="2">Moderada</option>
+                                        <option value="3">Intensa</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="pain-item">
+                                <label class="pain-label">
+                                    Pulso
+                                    <span class="side-badge left">L</span>
+                                </label>
+                                <div class="custom-select-wrapper">
+                                    <select class="pain-select" name="pulso_l">
+                                        <option value="" disabled selected>Selecione</option>
+                                        <option value="0">Sem dor</option>
+                                        <option value="1">Leve</option>
+                                        <option value="2">Moderada</option>
+                                        <option value="3">Intensa</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="pain-item">
+                                <label class="pain-label">
+                                    Dedo
+                                    <span class="side-badge left">L</span>
+                                </label>
+                                <div class="custom-select-wrapper">
+                                    <select class="pain-select" name="dedo_l">
+                                        <option value="" disabled selected>Selecione</option>
+                                        <option value="0">Sem dor</option>
+                                        <option value="1">Leve</option>
+                                        <option value="2">Moderada</option>
+                                        <option value="3">Intensa</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="pain-item">
+                                <label class="pain-label">
+                                    Tornozelo
+                                    <span class="side-badge left">L</span>
+                                </label>
+                                <div class="custom-select-wrapper">
+                                    <select class="pain-select" name="tornozelo_l">
+                                        <option value="" disabled selected>Selecione</option>
+                                        <option value="0">Sem dor</option>
+                                        <option value="1">Leve</option>
+                                        <option value="2">Moderada</option>
+                                        <option value="3">Intensa</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="pain-item">
+                                <label class="pain-label">
+                                    Joelho
+                                    <span class="side-badge left">L</span>
+                                </label>
+                                <div class="custom-select-wrapper">
+                                    <select class="pain-select" name="joelho_l">
+                                        <option value="" disabled selected>Selecione</option>
+                                        <option value="0">Sem dor</option>
+                                        <option value="1">Leve</option>
+                                        <option value="2">Moderada</option>
+                                        <option value="3">Intensa</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="pain-item">
+                                <label class="pain-label">
+                                    Dedo do pé
+                                    <span class="side-badge left">L</span>
+                                </label>
+                                <div class="custom-select-wrapper">
+                                    <select class="pain-select" name="dedo_pe_l">
+                                        <option value="" disabled selected>Selecione</option>
+                                        <option value="0">Sem dor</option>
+                                        <option value="1">Leve</option>
+                                        <option value="2">Moderada</option>
+                                        <option value="3">Intensa</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Lado Direito -->
+                    <div class="section-card">
+                        <div class="section-title">
+                            <i class="fas fa-arrow-right"></i>
+                            Lado Direito
+                        </div>
+                        <div class="pain-grid">
+                            <div class="pain-item">
+                                <label class="pain-label">
+                                    Ombro
+                                    <span class="side-badge right">R</span>
+                                </label>
+                                <div class="custom-select-wrapper">
+                                    <select class="pain-select" name="ombro_r">
+                                        <option value="" disabled selected>Selecione</option>
+                                        <option value="0">Sem dor</option>
+                                        <option value="1">Leve</option>
+                                        <option value="2">Moderada</option>
+                                        <option value="3">Intensa</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="pain-item">
+                                <label class="pain-label">
+                                    Pulso
+                                    <span class="side-badge right">R</span>
+                                </label>
+                                <div class="custom-select-wrapper">
+                                    <select class="pain-select" name="pulso_r">
+                                        <option value="" disabled selected>Selecione</option>
+                                        <option value="0">Sem dor</option>
+                                        <option value="1">Leve</option>
+                                        <option value="2">Moderada</option>
+                                        <option value="3">Intensa</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="pain-item">
+                                <label class="pain-label">
+                                    Dedo
+                                    <span class="side-badge right">R</span>
+                                </label>
+                                <div class="custom-select-wrapper">
+                                    <select class="pain-select" name="dedo_r">
+                                        <option value="" disabled selected>Selecione</option>
+                                        <option value="0">Sem dor</option>
+                                        <option value="1">Leve</option>
+                                        <option value="2">Moderada</option>
+                                        <option value="3">Intensa</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="pain-item">
+                                <label class="pain-label">
+                                    Tornozelo
+                                    <span class="side-badge right">R</span>
+                                </label>
+                                <div class="custom-select-wrapper">
+                                    <select class="pain-select" name="tornozelo_r">
+                                        <option value="" disabled selected>Selecione</option>
+                                        <option value="0">Sem dor</option>
+                                        <option value="1">Leve</option>
+                                        <option value="2">Moderada</option>
+                                        <option value="3">Intensa</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="pain-item">
+                                <label class="pain-label">
+                                    Joelho
+                                    <span class="side-badge right">R</span>
+                                </label>
+                                <div class="custom-select-wrapper">
+                                    <select class="pain-select" name="joelho_r">
+                                        <option value="" disabled selected>Selecione</option>
+                                        <option value="0">Sem dor</option>
+                                        <option value="1">Leve</option>
+                                        <option value="2">Moderada</option>
+                                        <option value="3">Intensa</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="pain-item">
+                                <label class="pain-label">
+                                    Dedo do pé
+                                    <span class="side-badge right">R</span>
+                                </label>
+                                <div class="custom-select-wrapper">
+                                    <select class="pain-select" name="dedo_pe_r">
+                                        <option value="" disabled selected>Selecione</option>
+                                        <option value="0">Sem dor</option>
+                                        <option value="1">Leve</option>
+                                        <option value="2">Moderada</option>
+                                        <option value="3">Intensa</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Actions -->
+                <div class="form-actions">
+                    <button type="button" class="btn-back" onclick="history.back()">
+                        <i class="fas fa-arrow-left"></i> Voltar
+                    </button>
+                    <button type="submit" class="btn-continue">
+                        Continuar <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- ===================== FAQ ===================== -->
+    <div class="faq-section">
+        <div class="faq-card">
+            <h2 class="faq-title">
+                <i class="fas fa-question-circle"></i>
+                Dúvidas Frequentes
+            </h2>
+            <div class="faq-list">
+                <div class="faq-item active">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>Dúvidas sobre CHIK.IA</span>
+                        <i class="fas fa-chevron-down faq-chevron"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            O CHIK.IA é uma plataforma de inteligência artificial desenvolvida para auxiliar profissionais 
+                            de saúde na previsão da progressão da Chikungunya. Utilizando algoritmos avançados de machine 
+                            learning, analisamos dados clínicos e laboratoriais para fornecer insights precisos sobre o 
+                            prognóstico do paciente.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>Os resultados são confiáveis?</span>
+                        <i class="fas fa-chevron-down faq-chevron"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Sim! Nosso modelo foi validado com mais de 10.000 casos clínicos e apresenta uma taxa de 
+                            precisão de 95%. Todos os algoritmos foram desenvolvidos e revisados por especialistas.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>Como foram selecionados os atributos?</span>
+                        <i class="fas fa-chevron-down faq-chevron"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Os atributos foram selecionados através de revisão sistemática da literatura científica e 
+                            validação com especialistas clínicos.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>Há validação por parte dos profissionais de saúde?</span>
+                        <i class="fas fa-chevron-down faq-chevron"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Absolutamente. Nosso sistema foi desenvolvido em parceria com médicos infectologistas, 
+                            reumatologistas e clínicos gerais de referência nacional.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>Existem outros modelos de IA semelhantes ao CHIK.IA?</span>
+                        <i class="fas fa-chevron-down faq-chevron"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            O CHIK.IA é pioneiro na previsão específica da progressão da Chikungunya com foco em dados 
+                            clínicos brasileiros, considerando as particularidades epidemiológicas do nosso país.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Sobre chik.ia</h4>
+                <p>
+                    Plataforma inovadora de inteligência artificial dedicada à previsão e 
+                    monitoramento da progressão da Chikungunya, desenvolvida para auxiliar 
+                    profissionais de saúde na tomada de decisões clínicas.
+                </p>
+            </div>
+            <div class="footer-section">
+                <h4>Links úteis</h4>
+                <ul class="footer-links">
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Home</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> CHIK.IA</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Sobre</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Equipe</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Parceiros</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Publicações</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Links Importantes</h4>
+                <ul class="footer-links">
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> OMS - Organização Mundial da Saúde</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Ministério da Saúde</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> SUS</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> SINAN</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contate-nos</h4>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <strong>Email</strong>
+                        <span>contato@chikia.upe.br</span>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <strong>Endereço</strong>
+                        <span>Rua Benfica, 455<br>Recife - PE, Brasil</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 CHIK.IA - Todos os direitos reservados. Desenvolvido com 
+            <i class="fas fa-heart"></i> para a saúde pública.
+        </div>
+    </footer>
+
+<script src="../JS/predict_data_2.js"></script>
+
+</body>
+</html>
