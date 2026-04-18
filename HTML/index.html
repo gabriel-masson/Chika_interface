@@ -7,9 +7,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../CSS/styles.css">
+    <link rel="stylesheet" href="../CSS/predict_pages.css">
 </head>
 <body>
-        <nav class="navbar">
+    <!-- Navigation -->
+    <nav class="navbar">
         <div class="nav-left">
             <a href="#" class="logo">
                 <div class="logo-icon">
@@ -37,11 +39,45 @@
             </button>
         </div>
     </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-shield-virus"></i>
+                    Inteligência Artificial Médica
+                </div>
+                <h1>CHIK.IA - Análise de Risco Clínico</h1>
+                <p class="hero-description">
+                    Plataforma avançada de inteligência artificial que analisa dados clínicos para 
+                    avaliar o risco e progressão da Chikungunya, auxiliando profissionais de saúde 
+                    na tomada de decisões estratégicas e baseadas em evidências.
+                </p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">98%</span>
+                        <div class="stat-label">Acurácia</div>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">1.2K+</span>
+                        <div class="stat-label">Usuários</div>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">45+</span>
+                        <div class="stat-label">Instituições</div>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">50K+</span>
+                        <div class="stat-label">Análises</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <div class="container">
-        <header>
-            <h1>Análise de Risco Clínico</h1>
-            <p class="subtitle">Sistema de Apoio à Decisão Clínica</p>
-        </header>
+        <!-- Removed: header section as it's now part of hero -->
 
         <!-- Seção de Resultado Principal -->
         <section class="result-section">
@@ -49,6 +85,12 @@
                 <div class="probability-display">
                     <div class="circular-progress">
                         <svg viewBox="0 0 120 120">
+                            <defs>
+                                <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#2e5c8a;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#6ec1e4;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
                             <circle class="progress-bg" cx="60" cy="60" r="54"/>
                             <circle class="progress-bar" id="progressBar" cx="60" cy="60" r="54"/>
                         </svg>
